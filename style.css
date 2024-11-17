@@ -1,0 +1,321 @@
+body {
+  background-image: linear-gradient(to right, #291222, #200518);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+/* SLIDE */
+.slider {
+  margin: 0 auto;
+  width: 700px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.slides {
+  width: 400%;
+  height: 400px;
+  display: flex;
+  border-radius: 20px;
+}
+
+.slides input {
+  display: none;
+  border-radius: 20px;
+}
+
+.slide {
+  width: 25%;
+  position: relative;
+  transition: 2s;
+  border-radius: 20px;
+}
+
+.slide img {
+  width: 700px;
+  border-radius: 20px;
+}
+
+.manual-navigation {
+  position: absolute;
+  width: 700px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid #000000;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 2s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background-color: #3d1a4b;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+  border-radius: 20px;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -25%;
+  border-radius: 20px;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -50%;
+  border-radius: 20px;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -75%;
+  border-radius: 20px;
+}
+
+.navigation-auto div {
+  border: 2px solid #3d1a4b;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+  border-radius: 20px;
+}
+
+.navigation-auto {
+  position: absolute;
+  width: 700px;
+  margin-top: 360px;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background-color: #9101ff;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background-color: #9101ff;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background-color: #9000ff;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background-color: #9000ff;
+}
+
+
+
+
+/* TEXTO */
+h3 {
+  color: #fff;
+  position: absolute; /* Para sobrepor o texto ao carrossel */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  top: 162px; /* Centraliza verticalmente */
+  left: 51%; /* Centraliza horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta para o centro exato */
+  width: 70%; /* Limita a largura para não extrapolar o carrossel */
+  z-index: 10; /* Garante que o texto fique acima das imagens */
+  font-size: large;
+  font-family: 'belgiano';
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'belgiano';
+  src: url('./Belgiano\ Serif\ 2.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
+/* DIAS JUNTAS */
+h2 {
+  font-family: 'dream';
+  font-size: 2em;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'dream';
+  src: url('./DreamFlourish.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#juntas {
+  color: #fff;
+  position: absolute; /* Para sobrepor o texto ao carrossel */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  top : 810px; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta para o centro exato */
+  width: 30%; /* Limita a largura para não extrapolar o carrossel */
+  z-index: 10; /* Garante que o texto fique acima das imagens */
+}
+
+h4 {
+  font-family: 'k';
+  font-size: 3em;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'k';
+  src: url('./keroppi.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#sapo {
+  top : -99px; /* Centraliza verticalmente */
+  left: 45%; /* Centraliza horizontalmente */
+  z-index: 10; /* Garante que o texto fique acima das imagens */
+  position: absolute; /* Para sobrepor o texto ao carrossel */
+}
+
+
+
+
+
+/* RELÓGIO */
+#contador {
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 30px;
+
+  display: flex;
+  justify-content: center;
+  position: absolute; /* Para sobrepor o texto ao carrossel */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  top: 850px; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translate(-50%, -50%); /* Ajusta para o centro exato */
+  width: 30%; /* Limita a largura para não extrapolar o carrossel */
+  z-index: 5; /* Garante que o texto fique acima das imagens */
+}
+
+.box {
+  display: inline-block;
+  flex-direction: row;
+  align-items: center;
+  margin: 5 15px;
+  width: 90px;
+
+  font-family: 'belgiano';
+  font-size: 2em;
+  font-weight: normal;
+}
+
+.time-box {
+  background-color: #3d1a4b;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  width: 60px;
+  text-align: center;
+}
+
+.label {
+  color: #fff;
+  font-size: 0.40em;
+  margin-top: 10px;
+}
+
+.manual-navigation {
+  text-align: center;
+}
+
+
+
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  @media (max-width: 768px) {
+    .manual-navigation,
+    .navigation-auto {
+      display: none; /* Esconde as bolinhas no celular */
+    }
+  }
+  
+  
+  .slider {
+    width: 95%;
+    height: 90%;
+  }
+
+  .slide img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+
+  h3 { 
+    font-size: 1rem;
+    width: 100%;
+    top: -340px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #juntas {
+    top: 111%;
+    font-size: 1rem;
+    width: 90%;
+  }
+
+  #contador {
+    font-size: 1rem;
+    top: 120%;
+    width: 90%;
+  }
+
+  .box {
+    width: 80px;
+  }
+
+  .time-box {
+    font-size: 1.5rem;
+    width: 50px;
+  }
+
+  .label {
+    font-size: 0.8em;
+      margin-top: 15px;
+  }
+
+#sapo {
+  left: 42%;
+  top: -114%;
+}
+}
